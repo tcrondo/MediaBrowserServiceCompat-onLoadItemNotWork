@@ -45,6 +45,9 @@ public class MainActivity extends AppCompatActivity {
         mBrowser.getItem(itemId, new MediaBrowserCompat.ItemCallback() {
             @Override
             public void onItemLoaded(MediaBrowserCompat.MediaItem item) {
+                // The log function below prints:
+                // `item: item3` on Android 6
+                // `item: null` on Android 7
                 Log.d(TAG, "item: " + item.getMediaId());
             }
         });
